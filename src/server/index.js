@@ -5,8 +5,7 @@ const app = express();
 
 app.use(express.static('dist'));
 app.get('/api/:file', (req, res) => {
-    console.log(__dirname)
-    fs.readFile( __dirname +'/' + req.params.file + ".json", 'utf8', function (err, data) {
+    fs.readFile( __dirname +'/api/' + req.params.file + ".json", 'utf8', function (err, data) {
         res.send(data);
         res.end( data );
     });

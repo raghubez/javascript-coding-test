@@ -43,10 +43,8 @@ const App = () => {
       .then(data => setConditions(data.conditions));
   }, [])
 
-  const getTruncatedText = (text, maxLimit) => {
-    console.log(text.length);
-    return text.length > maxLimit ? <>{`${(text).substring(0, maxLimit-15)} ...`}<MoreText>find out more</MoreText></> : text;
-  }
+  const getTruncatedText = (text, maxLimit) =>
+    text.length > maxLimit ? <>{`${(text).substring(0, maxLimit-15)} ...`}<MoreText>find out more</MoreText></> : text;
 
   return (
     <Wrapper>
